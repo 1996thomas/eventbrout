@@ -1,0 +1,2 @@
+module PagetestsHelper
+end

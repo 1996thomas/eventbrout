@@ -1,0 +1,24 @@
+  <div class="container my-5 d-flex flex-column justify-content-center align-items-center">
+    <h1 class="my-3">Créer un évenement</h1>
+<%= form_with model:@event do |form| %>
+  <div class="container my-5 d-flex flex-column justify-content-center align-items-center">
+<%=form.label :title,"Nom de l'évenement" %>
+<%=form.text_field :title, placeholder:"entre 5 et 140 caractère" %>
+
+<%=form.label :start_date,"Jour de l'évenement" %>
+<%=form.text_field :start_date,placeholder:"aaaa/mm/jj" %>
+
+<%=form.label :description,"Description" %>
+<%=form.text_area :description,placeholder:"entre 20 et 500 caractère" %>
+
+<%=form.label :price,"Prix de l'évenement" %>
+<%=form.text_field :price, placeholder:"entre 1 et 1000 € " %>
+
+<%=form.label :location,"Lieu de l'évenement" %>
+<%=form.text_field :location %>
+
+<%=form.label :duration,"Durée de l'évenement" %>
+<%=form.text_field :duration, placeholder:"divisible par 5" %>
+
+<%=form.submit "Créer un évenement" %>
+<%end%>

@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.update(admin_id: current_user.id)
     @event.save
-    redirect_to event_path(@event.id)
+    redirect_to events_path
   end
 
   private

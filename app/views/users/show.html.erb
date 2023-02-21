@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+  <div class="container">
+    <div class="card my-3">
+      <div class="card-header">
+        <%=@user.first_name %>, <%=@user.last_name %>
+      </div>
+      <div class="card-body">
+        <p class="card-text">A propos : <%=@user.description %></p>
+        <p class="card-text">Contact : <%=@user.email %></p>
+        <%= link_to "Retour à l'accueil", root_path,class:"btn btn-sm btn-outline-primary"%>
+        <button href="#" class="btn btn-outline-secondary btn-sm">Contacter</button>
+        <% if @user == current_user %>
+          <%= link_to "Modifier le profil", root_path%>
+          <%end %>
+        </div>
+      </div>
+    </div>

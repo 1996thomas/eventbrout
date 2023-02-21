@@ -18,6 +18,16 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end 
+
+  def update 
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    redirect_to event_path(@event.id)
+  end
+
   private
   def event_params 
     params.require(:event).permit(:start_date,:title,:description,:price,:location,:duration)

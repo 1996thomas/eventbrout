@@ -13,13 +13,13 @@ class EventsController < ApplicationController
 
   def create 
     @event = Event.new(event_params)
-    @event.update!(admin: current_user)
+    @event.update!(admin_id: current_user)
     @event.save!
     redirect_to events_path
   end
 
   private
   def event_params 
-    params.require(:event).permit(:start_date,:title,:description,:price,:location,:duration,:admin_id)
+    params.require(:event).permit(:start_date,:title,:description,:price,:location,:duration)
   end
 end

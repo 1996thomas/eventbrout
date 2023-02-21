@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Things you may want to cover:
 
-Things you may want to cover:
+* Ruby version 3.0.0
 
-* Ruby version
+* Version Heroku : https://eventbrout.herokuapp.com/
 
-* System dependencies
+* Database creation : rails db:create and rails db:migrate
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Make sure to make a profile before trying to add some events !

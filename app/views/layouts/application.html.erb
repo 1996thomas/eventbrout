@@ -33,16 +33,27 @@
             </ul>
           </div>
         </div>
+        <% if user_signed_in? %>
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mon compte
+            </a>
+            <div class="dropdown-menu">
+              <%= link_to "Secret page", static_pages_secret_path, class:"dropdown-item" %>
+              <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+            </div>
+          </div>
+        <%else %>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+            S'inscrire / Se connecter
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Se connecter</a>
-            <a class="dropdown-item" href="#">Créer un compte</a>
+            <%= link_to "Se connecter", new_user_session_path, class:"dropdown-item" %>
+            <%= link_to "Créer un compte", new_user_registration_path, class:"dropdown-item" %>
           </div>
         </div>
-
+        <%end%>
       </nav>
     </header>
     <%= yield %>

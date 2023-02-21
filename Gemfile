@@ -74,4 +74,5 @@ end
 gem 'faker'
 gem 'letter_opener_web'
 gem 'dotenv-rails'
-gem 'sendgrid-ruby'
+gem 'devise'
+gem 'htmlbeautifier'

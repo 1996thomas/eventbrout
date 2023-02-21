@@ -1,0 +1,25 @@
+<div class="container">
+<h1>Evenement à venir</h1>
+    <% @events.each do |event| %>
+      <ul style="background-color:#DCDCDC;border-radius:10px; margin:10px">
+        <li>
+         Nom de l'évent : <%=event.title %>
+        </li>
+        <li>
+         Prix : <%=event.price %> $
+        </li>
+        <li>
+         Description : <%=event.description %>
+        </li>
+        <li>
+         Location : <%=event.location %>
+        </li>
+        <li>
+         Durée : <%=event.duration %> minutes
+        </li>
+        <li>
+         Date : <%=event.start_date %>
+        </li>
+      </ul>
+    <%end %>
+</div>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  root 'pagetests/index'
+  root 'events#index'
+  get 'static_pages/secret'
+  devise_for :users
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
